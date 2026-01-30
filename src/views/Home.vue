@@ -165,35 +165,35 @@ function initMobileCarousel() {
                 <!-- Left 2: Theme -->
                 <div class="phone left-2">
                     <div class="phone-screen">
-                        <img src="/assets/img/theme.png" alt="Theme Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="@/assets/img/theme.png" alt="Theme Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Left 1: Analytics -->
                 <div class="phone left-1">
                     <div class="phone-screen">
-                        <img src="/assets/img/analitics.png" alt="Analytics Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="@/assets/img/analitics.png" alt="Analytics Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Center: Home Screen -->
                 <div class="phone center">
                     <div class="phone-screen">
-                        <img src="/assets/img/main.png" alt="Main Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="@/assets/img/main.png" alt="Main Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Right 1: Add Transaction -->
                 <div class="phone right-1">
                     <div class="phone-screen">
-                        <img src="/assets/img/transaction.png" alt="Add Transaction" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="@/assets/img/transaction.png" alt="Add Transaction" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Right 2: Limits -->
                 <div class="phone right-2">
                     <div class="phone-screen">
-                        <img src="/assets/img/limits.png" alt="Limits Screen" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="@/assets/img/limits.png" alt="Limits Screen" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ npm run dev
 ```
 
 ### Build
-The build output is configured to the `build/` directory (instead of `dist/`).
+The build output is configured to the `docs/` directory (instead of `dist/`).
 ```bash
 npm run build
 ```

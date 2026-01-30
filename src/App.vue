@@ -17,7 +17,7 @@ const currentLangLabel = computed(() => locale.value === 'en' ? 'RU' : 'EN')
     <header>
         <div class="container">
             <router-link to="/" class="logo">
-                <img src="@/assets/img/AppIconDark.png" alt="LuCent App Icon" class="logo-icon">
+                <img src="@/assets/img/AppIconDark.webp" alt="LuCent App Icon" class="logo-icon">
                 LuCent
             </router-link>
             <nav>
@@ -44,7 +44,7 @@ const currentLangLabel = computed(() => locale.value === 'en' ? 'RU' : 'EN')
             <div class="footer-content">
                 <div class="footer-brand" style="max-width: 300px;">
                     <router-link to="/" class="logo" style="margin-bottom: 20px; display: inline-flex;">
-                        <img src="@/assets/img/AppIconDark.png" alt="LuCent App Icon" class="logo-icon">
+                        <img src="@/assets/img/AppIconDark.webp" alt="LuCent App Icon" class="logo-icon">
                         LuCent
                     </router-link>
                     <p style="color: var(--text-secondary); font-size: 0.9rem;">

@@ -2,6 +2,12 @@
 import { onMounted, onUnmounted, ref, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+import themeImg from '@/assets/img/theme.webp'
+import analyticsImg from '@/assets/img/analitics.webp'
+import mainImg from '@/assets/img/main.webp'
+import transactionImg from '@/assets/img/transaction.webp'
+import limitsImg from '@/assets/img/limits.webp'
+
 const { t } = useI18n()
 
 const phonesContainerRef = ref(null)
@@ -9,7 +15,6 @@ const dotsRef = ref(null)
 let scrollListener = null
 
 onMounted(() => {
-  initImages()
   nextTick(() => {
     initMobileCarousel()
     initScrollReveal()
@@ -21,22 +26,6 @@ onUnmounted(() => {
     phonesContainerRef.value.removeEventListener('scroll', scrollListener)
   }
 })
-
-function initImages() {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        if (img.complete) {
-            img.classList.add('img-loaded');
-        } else {
-            img.onload = () => {
-                img.classList.add('img-loaded');
-            };
-            img.onerror = () => {
-                img.classList.add('img-loaded');
-            };
-        }
-    });
-}
 
 function initScrollReveal() {
     const observerOptions = {
@@ -165,35 +154,35 @@ function initMobileCarousel() {
                 <!-- Left 2: Theme -->
                 <div class="phone left-2">
                     <div class="phone-screen">
-                        <img src="@/assets/img/theme.png" alt="Theme Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img v-lazy="themeImg" alt="Theme Screen" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Left 1: Analytics -->
                 <div class="phone left-1">
                     <div class="phone-screen">
-                        <img src="@/assets/img/analitics.png" alt="Analytics Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img v-lazy="analyticsImg" alt="Analytics Screen" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Center: Home Screen -->
                 <div class="phone center">
                     <div class="phone-screen">
-                        <img src="@/assets/img/main.png" alt="Main Screen" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img v-lazy="mainImg" alt="Main Screen" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Right 1: Add Transaction -->
                 <div class="phone right-1">
                     <div class="phone-screen">
-                        <img src="@/assets/img/transaction.png" alt="Add Transaction" loading="eager" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img v-lazy="transactionImg" alt="Add Transaction" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
 
                 <!-- Right 2: Limits -->
                 <div class="phone right-2">
                     <div class="phone-screen">
-                        <img src="@/assets/img/limits.png" alt="Limits Screen" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img v-lazy="limitsImg" alt="Limits Screen" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>

@@ -3,9 +3,9 @@
 **LuCent** is a modern, privacy-first expense tracker for iOS designed for speed and elegance. It offers an offline-first experience with seamless cloud sync.
 
 <p align="center">
-  <img src="docs/assets/img/main.png" alt="LuCent Main Screen" width="240" style="border-radius: 20px;">
-  <img src="docs/assets/img/analitics.png" alt="Analytics" width="240" style="border-radius: 20px;">
-  <img src="docs/assets/img/theme.png" alt="Themes" width="240" style="border-radius: 20px;">
+  <img src="public/assets/img/main.png" alt="LuCent Main Screen" width="240" style="border-radius: 20px;">
+  <img src="public/assets/img/analitics.png" alt="Analytics" width="240" style="border-radius: 20px;">
+  <img src="public/assets/img/theme.png" alt="Themes" width="240" style="border-radius: 20px;">
 </p>
 
 🔗 **Download on the App Store:** [LuCent - Fast Expense Tracker](https://apps.apple.com/app/id6756549886)
@@ -23,9 +23,30 @@
 
 ## 📄 Privacy & Terms
 
-- [Privacy Policy](docs/privacy/index.html)
-- [Terms of Service](docs/terms/index.html)
-- [Support & Contact](docs/contact/index.html)
+- [Privacy Policy](src/views/Privacy.vue)
+- [Terms of Service](src/views/Terms.vue)
+- [Support & Contact](src/views/Contact.vue)
+
+---
+## 🚀 Development & Build
+
+This project is built with Vue 3 + Vite.
+
+### Setup
+```bash
+npm install
+```
+
+### Development
+```bash
+npm run dev
+```
+
+### Build
+The build output is configured to the `build/` directory (instead of `dist/`).
+```bash
+npm run build
+```
 
 ---
 © 2026 LuCent. Developed by Siarhei Nikalaichyk.

@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - LuCent</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="icon" type="image/png" href="../assets/img/AppIconDark.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    <header>
-        <div class="container">
-            <a href="../" class="logo">
-                <img src="../assets/img/AppIconDark.png" alt="LuCent App Icon" class="logo-icon">
-                LuCent
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="../">Home</a></li>
-                    <li><a href="../contact/">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+<template>
     <div class="container">
         <div class="text-content">
             <h1>Terms and Conditions</h1>
@@ -100,57 +72,9 @@
                     style="color: var(--primary); font-weight: bold;">nikalaichyksiarhei@gmail.com</a></p>
 
             <div style="margin-top: 60px; text-align: center;">
-                <a href="../" class="btn btn-primary"
-                    style="background: transparent; border-color: var(--primary);">Back to Home</a>
+                <router-link to="/" class="btn btn-primary"
+                    style="background: transparent; border-color: var(--primary);">Back to Home</router-link>
             </div>
         </div>
     </div>
-
-    <footer>
-        <div class="container">
-            <div class="copyright" style="border: none;">
-                &copy; 2026 LuCent. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand" style="max-width: 300px;">
-                    <a href="../" class="logo" style="margin-bottom: 20px; display: inline-flex;">
-                        <img src="../assets/img/AppIconDark.png" alt="LuCent App Icon" class="logo-icon">
-                        LuCent
-                    </a>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">
-                        Your personal finance companion. Built for privacy, speed, and simplicity.
-                    </p>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Legals</h4>
-                    <ul>
-                        <li><a href="../privacy/">Privacy Policy</a></li>
-                        <li><a href="../terms/">Terms of Service</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Support</h4>
-                    <ul>
-                        <li><a href="../contact/">Contact Us</a></li>
-                        <li><a href="mailto:nikalaichyksiarhei@gmail.com">nikalaichyksiarhei@gmail.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2026 LuCent. All rights reserved.
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+</template>

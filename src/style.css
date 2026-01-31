@@ -828,3 +828,55 @@ textarea:focus {
     margin-bottom: 20px;
     color: white;
 }
+/* Spotlight Effect for Feature Cards */
+.feature-card {
+    position: relative;
+    /* Ensure z-index allows glow to be seen but text to be on top */
+    z-index: 1;
+    overflow: hidden; /* Contain the glow */
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.06),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.features-grid:hover .feature-card::before {
+    opacity: 1;
+}
+
+/* Optional: Border Glow Effect */
+.feature-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px; /* Border width */
+    background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.3),
+        transparent 40%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.features-grid:hover .feature-card::after {
+    opacity: 1;
+}

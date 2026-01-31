@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onUnmounted, ref, nextTick } from 'vue'
+import { onMounted, onUnmounted, onBeforeUnmount, ref, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import themeImg from '@/assets/img/theme.webp'
@@ -12,9 +12,13 @@ const { t } = useI18n()
 
 const phonesContainerRef = ref(null)
 const dotsRef = ref(null)
+const parallaxStyle = ref({})
 let scrollListener = null
 
 onMounted(() => {
+  if (window.innerWidth > 768) {
+    window.addEventListener('mousemove', handleMouseMove)
+  }
   nextTick(() => {
     initMobileCarousel()
     initScrollReveal()
@@ -22,10 +26,37 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+  if (window.innerWidth > 768) {
+    window.removeEventListener('mousemove', handleMouseMove)
+  }
   if (phonesContainerRef.value && scrollListener) {
     phonesContainerRef.value.removeEventListener('scroll', scrollListener)
   }
 })
+
+function handleMouseMove(e) {
+  // Parallax Logic for Phones
+  const { clientX, clientY } = e
+  const { innerWidth, innerHeight } = window
+
+  // Calculate rotation based on cursor position relative to center
+  const x = (clientX - innerWidth / 2) / innerWidth // -0.5 to 0.5
+  const y = (clientY - innerHeight / 2) / innerHeight // -0.5 to 0.5
+
+  parallaxStyle.value = {
+    transform: `rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`
+  }
+
+  // Spotlight Logic for Feature Cards
+  const cards = document.querySelectorAll('.feature-card')
+  for(const card of cards) {
+    const rect = card.getBoundingClientRect()
+    const x = clientX - rect.left
+    const y = clientY - rect.top
+    card.style.setProperty('--mouse-x', `${x}px`)
+    card.style.setProperty('--mouse-y', `${y}px`)
+  }
+}
 
 function initScrollReveal() {
     const observerOptions = {
@@ -150,7 +181,7 @@ function initMobileCarousel() {
             </div>
 
             <!-- Phones Animation Showcase -->
-            <div class="phones-container" ref="phonesContainerRef">
+            <div class="phones-container" ref="phonesContainerRef" :style="parallaxStyle">
                 <!-- Left 2: Theme -->
                 <div class="phone left-2">
                     <div class="phone-screen">

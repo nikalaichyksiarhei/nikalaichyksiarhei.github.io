@@ -234,9 +234,11 @@ function initMobileCarousel() {
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                            <!-- Axis -->
+                            <line x1="3" y1="20" x2="21" y2="20" stroke-opacity="0.3"></line>
+                            <line x1="3" y1="20" x2="3" y2="4" stroke-opacity="0.3"></line>
+                            <!-- Animated Graph Line -->
+                            <path class="anim-graph-path" d="M3 20 L9 14 L15 16 L21 6" stroke="#009688" stroke-dasharray="100" stroke-dashoffset="100"></path>
                         </svg>
                     </div>
                     <h3>{{ t('features.analytics.title') }}</h3>
@@ -247,10 +249,10 @@ function initMobileCarousel() {
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
+                            <rect class="anim-widget-rect" x="3" y="3" width="7" height="7" rx="1" stroke="#009688"></rect>
+                            <rect class="anim-widget-rect" x="14" y="3" width="7" height="7" rx="1"></rect>
+                            <rect class="anim-widget-rect" x="14" y="14" width="7" height="7" rx="1" stroke="#009688"></rect>
+                            <rect class="anim-widget-rect" x="3" y="14" width="7" height="7" rx="1"></rect>
                         </svg>
                     </div>
                     <h3>{{ t('features.widgets.title') }}</h3>
@@ -261,7 +263,12 @@ function initMobileCarousel() {
                 <div class="feature-card">
                     <div class="feature-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <!-- Background Circle -->
+                            <circle cx="12" cy="12" r="9" stroke-opacity="0.2"></circle>
+                            <!-- Animated Progress -->
+                            <path class="anim-limits-path" d="M12 3 A 9 9 0 1 1 3 12" stroke="#009688" stroke-dasharray="60" stroke-dashoffset="60" stroke-linecap="round"></path>
+                            <!-- Checkmark -->
+                            <path d="M9 12l2 2 4-4" stroke-width="1.5"></path>
                         </svg>
                     </div>
                     <h3>{{ t('features.limits.title') }}</h3>
@@ -271,8 +278,16 @@ function initMobileCarousel() {
                 <!-- Light & Dark Modes -->
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        <svg class="anim-theme-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                         </svg>
                     </div>
                     <h3>{{ t('features.theme.title') }}</h3>

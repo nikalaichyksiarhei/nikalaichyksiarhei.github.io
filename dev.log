@@ -8,3 +8,8 @@
 
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
+1:38:17 PM [vite] hmr update /src/style.css
+1:39:37 PM [vite] hmr update /src/views/Home.vue
+2:34:11 PM [vite] hmr update /src/style.css
+4:34:05 PM [vite] hmr update /src/style.css
+4:35:43 PM [vite] hmr update /src/views/Home.vue
